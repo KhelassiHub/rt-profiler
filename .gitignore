@@ -1,0 +1,41 @@
+# Build artifacts
+*.o
+*.so
+*.a
+*.out
+
+# Loop map generated at compile time
+loop_map.json
+
+# Profiling data
+*.prof
+*.log
+*.dat
+
+# Editor and IDE
+# .vscode/ is committed for remote development setup
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# But ignore local workspace settings if needed
+# .vscode/settings.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+
+# Temporary files
+/tmp/
+*.tmp
+
+# SSH keys (should never be committed)
+*.pem
+*.key
+id_rsa*
+known_hosts
