@@ -8,6 +8,13 @@ Per-line instrumentation with loop-boundary fallback for Raspberry Pi 3 using GC
 - tools/next_target.py: advance target line (skip loops)
 - tools/run_all.sh: compile/run/advance automation
 
+## Remote Development
+
+**New!** Work on this project remotely via SSH with VSCode and GitHub Copilot:
+- 🚀 **[Quick Start Guide](.github/QUICKSTART.md)** - Get started in 5 minutes
+- 📚 **[Complete Remote Development Guide](.github/REMOTE_DEVELOPMENT.md)** - Detailed setup and configuration
+- ⚙️ **[SSH Config Example](.github/ssh-config-example)** - Template for your SSH configuration
+
 ## Build the plugin and runtime
 ```
 # Build plugin
@@ -26,10 +33,6 @@ chmod +x ./tools/next_target.py
 
 ./tools/run_all.sh ./your_program.c 1
 ```
-
-## Remote Development
-
-For working on this project remotely via SSH with VSCode and GitHub Copilot, see [Remote Development Guide](.github/REMOTE_DEVELOPMENT.md).
 
 ## Notes
 - Use `-O0 -g` for best line fidelity.
