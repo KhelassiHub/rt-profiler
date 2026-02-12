@@ -27,6 +27,10 @@ chmod +x ./tools/next_target.py
 ./tools/run_all.sh ./your_program.c 1
 ```
 
+## Remote Development
+
+For working on this project remotely via SSH with VSCode and GitHub Copilot, see [Remote Development Guide](.github/REMOTE_DEVELOPMENT.md).
+
 ## Notes
 - Use `-O0 -g` for best line fidelity.
 - The loop map is written to `./loop_map.json` at compile time.

@@ -1,0 +1,55 @@
+# Example SSH Config for Remote Development
+# Copy this to ~/.ssh/config and adjust the values for your setup
+
+# Raspberry Pi 3 Target Machine
+Host rt-profiler-pi
+    HostName 192.168.1.100  # Replace with your Pi's IP address
+    User pi                  # Replace with your username
+    Port 22
+    IdentityFile ~/.ssh/id_rsa  # Path to your SSH private key
+    
+    # Keep connection alive
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    
+    # Enable connection multiplexing for faster subsequent connections
+    ControlMaster auto
+    ControlPath ~/.ssh/control-%r@%h:%p
+    ControlPersist 10m
+    
+    # Port forwarding (if needed for web servers, etc.)
+    # LocalForward 8080 localhost:8080
+    # LocalForward 3000 localhost:3000
+
+# Alternative: Cloud Development Machine
+Host rt-profiler-cloud
+    HostName your-cloud-instance.compute.amazonaws.com
+    User ubuntu
+    Port 22
+    IdentityFile ~/.ssh/cloud_key.pem
+    
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    
+    # Forward agent for git operations
+    ForwardAgent yes
+
+# Alternative: Local Network Development Server
+Host rt-profiler-dev
+    HostName 192.168.1.200
+    User developer
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    
+    # Compression for slower connections
+    Compression yes
+    CompressionLevel 6
+
+# Notes:
+# 1. Generate SSH key if you don't have one: ssh-keygen -t rsa -b 4096
+# 2. Copy key to remote: ssh-copy-id user@host
+# 3. Test connection: ssh rt-profiler-pi
+# 4. In VSCode: Ctrl+Shift+P -> "Remote-SSH: Connect to Host" -> Select your host

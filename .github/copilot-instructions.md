@@ -53,6 +53,13 @@
 	Clean up the copilot-instructions.md file in the .github directory by removing all HTML comments.
 	 -->
 
+## Remote Development Setup
+This project supports remote development via SSH with VSCode and GitHub Copilot. See [REMOTE_DEVELOPMENT.md](REMOTE_DEVELOPMENT.md) for detailed instructions on:
+- Setting up SSH remote development in VSCode
+- Configuring GitHub Copilot to run locally, remotely, or in the cloud
+- Working on the project from your local machine while building/testing on a remote machine (e.g., Raspberry Pi 3)
+- Multi-machine development workflows
+
 <!--
 ## Execution Guidelines
 PROGRESS TRACKING:

@@ -1,0 +1,24 @@
+{
+  "remote.SSH.showLoginTerminal": true,
+  "remote.SSH.useLocalServer": false,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "c": true,
+    "cpp": true,
+    "python": true,
+    "shell": true
+  },
+  "github.copilot.advanced": {},
+  "files.associations": {
+    "*.cc": "cpp",
+    "*.c": "c",
+    "*.h": "c"
+  },
+  "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+  "C_Cpp.default.cStandard": "c11",
+  "C_Cpp.default.cppStandard": "c++14",
+  "C_Cpp.default.intelliSenseMode": "linux-gcc-arm64"
+}
