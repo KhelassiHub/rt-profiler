@@ -1,4 +1,4 @@
-# rt-profiler
+# GPIL
 
 Per-line instrumentation with loop-boundary fallback for Raspberry Pi 3 using GCC plugins and PMU counters.
 
